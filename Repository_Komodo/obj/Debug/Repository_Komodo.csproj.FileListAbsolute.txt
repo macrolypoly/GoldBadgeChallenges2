@@ -1,0 +1,6 @@
+C:\Users\karina\source\repos\KomodoApp\Repository_Komodo\bin\Debug\Repository_Komodo.dll
+C:\Users\karina\source\repos\KomodoApp\Repository_Komodo\bin\Debug\Repository_Komodo.pdb
+C:\Users\karina\source\repos\KomodoApp\Repository_Komodo\obj\Debug\Repository_Komodo.csprojAssemblyReference.cache
+C:\Users\karina\source\repos\KomodoApp\Repository_Komodo\obj\Debug\Repository_Komodo.csproj.CoreCompileInputs.cache
+C:\Users\karina\source\repos\KomodoApp\Repository_Komodo\obj\Debug\Repository_Komodo.dll
+C:\Users\karina\source\repos\KomodoApp\Repository_Komodo\obj\Debug\Repository_Komodo.pdb
