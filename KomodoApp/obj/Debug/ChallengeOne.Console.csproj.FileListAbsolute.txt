@@ -1,0 +1,10 @@
+C:\1150\GoldBadgeChallenges\KomodoApp\bin\Debug\KomodoApp.exe.config
+C:\1150\GoldBadgeChallenges\KomodoApp\bin\Debug\KomodoApp.exe
+C:\1150\GoldBadgeChallenges\KomodoApp\bin\Debug\KomodoApp.pdb
+C:\1150\GoldBadgeChallenges\KomodoApp\bin\Debug\Repository_Komodo.dll
+C:\1150\GoldBadgeChallenges\KomodoApp\bin\Debug\Repository_Komodo.pdb
+C:\1150\GoldBadgeChallenges\KomodoApp\obj\Debug\ChallengeOne.Console.csprojAssemblyReference.cache
+C:\1150\GoldBadgeChallenges\KomodoApp\obj\Debug\ChallengeOne.Console.csproj.CoreCompileInputs.cache
+C:\1150\GoldBadgeChallenges\KomodoApp\obj\Debug\ChallengeOne.Console.csproj.CopyComplete
+C:\1150\GoldBadgeChallenges\KomodoApp\obj\Debug\KomodoApp.exe
+C:\1150\GoldBadgeChallenges\KomodoApp\obj\Debug\KomodoApp.pdb

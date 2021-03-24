@@ -16,33 +16,52 @@ namespace KomodoApp
             SeedMenu();
             Menu();
         }
-
         private void SeedMenu()
         {
-            Menu burger = new Menu(1, "Burger", "hamburger", , 2);
+            List<string> ingredients = new List<string>();
+            PopulateList(ingredients);
+            Menu burger = new Menu(1, "Burger", "hamburger", ingredients, 2);
 
             _repo.AddItems(burger);
+        }
+        public void PopulateList(List<string> ingredients)
+        {
+            ingredients.Add("beef");
+            ingredients.Add("onion");
+            ingredients.Add("cheese");
+            ingredients.Add("lettuce");
+            ingredients.Add("tomato");
+            ingredients.Add("bread");
+            ingredients.Add("ketchup");
         }
 
         public void Menu()
         {
-            Console.WriteLine("choose an option.");
-            Console.WriteLine("1: return list");
-            Console.WriteLine("2: add menu item");
-            Console.WriteLine("3: delete menu item");
-            string caseSwitch = Console.ReadLine();
-            switch (caseSwitch)
+            bool keepRunning = true;
+            while (keepRunning)
             {
-                case "1":
-                    DisplayList();
-                    break;
-                case "2":
-                    AddItems();
-                    break;
-                case "3":
-                    DeleteItems();
-                    break;
+                Console.WriteLine("choose an option.");
+                Console.WriteLine("1: return list");
+                Console.WriteLine("2: add menu item");
+                Console.WriteLine("3: delete menu item");
+                Console.WriteLine("4: exit");
+                string caseSwitch = Console.ReadLine();
+                switch (caseSwitch)
+                {
+                    case "1":
+                        DisplayList();
+                        break;
+                    case "2":
+                        AddItems();
+                        break;
+                    case "3":
+                        DeleteItems();
+                        break;
+                    case "4":
+                        keepRunning = false;
+                        break;
 
+                }
             }
         }
         private void DisplayList()
@@ -59,6 +78,7 @@ namespace KomodoApp
                     $"Meal ingredients: {content.Ingredients}\n" +
                     $"Meal price: {content.MealPrice}\n");
             }
+            Console.ReadKey();
         }
         private void AddItems()
         {
@@ -78,8 +98,12 @@ namespace KomodoApp
             newItem.MealDescription = Console.ReadLine();
 
             //meal ingredients
-            Console.WriteLine("Please enter the list of ingredients.");
-            newItem.Ingredients.Add(Console.ReadLine());
+            List<string> Ingredients = new List<string>();
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("enter an ingredient.");
+                Ingredients.Add(Console.ReadLine());
+            }
 
             _repo.AddItems(newItem);
         }
