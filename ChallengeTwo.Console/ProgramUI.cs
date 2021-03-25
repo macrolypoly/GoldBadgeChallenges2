@@ -18,7 +18,10 @@ namespace ChallengeTwo.Console
         }
         public void SeedClaim()
         {
-            Claim claim1 = new Claim(1, Claim.ClaimType.Car, "Car accident on 465.", 400, 4 / 25 / 18, 4 / 27 / 18, true);
+            DateTime example = new DateTime(2018,4,25);
+            DateTime example2 = new DateTime(2018, 4, 27);
+            Claim claim1 = new Claim(1, Claim.ClaimType.Car, "Car accident on 465.", 400, example, example2, true);
+            _repo.AddClaim(claim1);
         }
         public void Menu()
         {
@@ -58,7 +61,7 @@ namespace ChallengeTwo.Console
             foreach (Claim content in listClaim)
             {
                 System.Console.WriteLine($"Claim ID: {content.ClaimID}\n" +
-                    $"Claim Type: { content.GetType()}\n" +
+                    $"Claim Type: { content.property}\n" +
                     $"Claim Description: {content.Description}\n" +
                     $"Claim Amount: {content.ClaimAmount}\n" +
                     $"Date of Incident: {content.DateOfIncident}\n" +
