@@ -22,5 +22,23 @@ namespace KomodoTest
 
             Assert.AreEqual(expected, actual);
         }
+        [TestInitialize]
+
+        public void Arrange()
+        {
+            Menu menu = new Menu();
+            MenuRepository repo = new MenuRepository();
+        }
+        [TestMethod]
+        public void MyTestMethod_AddContentToMenu()
+        {
+            //Arrange
+            Menu menu = new Menu();
+            MenuRepository repo = new MenuRepository();
+            //Act
+            bool actual = repo.AddItemToMenu(menu);
+            //Assert
+            Assert.IsTrue(actual);
+        }
     }
 }

@@ -19,20 +19,11 @@ namespace KomodoApp
         private void SeedMenu()
         {
             List<string> ingredients = new List<string>();
-            PopulateList(ingredients);
+            string[] ing = {"beef", "bread","tomato","lettuce","ketchup","onion"};
+            ingredients.AddRange(ing);
             Menu burger = new Menu(1, "Burger", "hamburger", ingredients, 2);
 
             _repo.AddItems(burger);
-        }
-        public void PopulateList(List<string> ingredients)
-        {
-            ingredients.Add("beef");
-            ingredients.Add("onion");
-            ingredients.Add("cheese");
-            ingredients.Add("lettuce");
-            ingredients.Add("tomato");
-            ingredients.Add("bread");
-            ingredients.Add("ketchup");
         }
 
         public void Menu()
@@ -72,11 +63,15 @@ namespace KomodoApp
 
             foreach (Menu content in listMenu)
             {
-                Console.WriteLine($"Meal number: {content.MealNumber}\n"+
+                Console.WriteLine($"Meal number: {content.MealNumber}\n" +
                     $"Meal name: { content.MealName}\n" +
                     $"Meal description: {content.MealDescription}\n" +
-                    $"Meal ingredients: {content.Ingredients}\n" +
-                    $"Meal price: {content.MealPrice}\n");
+                    $"Meal ingredients:\n"); 
+                    foreach(var item in content.Ingredients)
+                {
+                    Console.WriteLine(item);
+                }
+                    Console.WriteLine($"Meal price: {content.MealPrice}\n");
             }
             Console.ReadKey();
         }
@@ -99,11 +94,15 @@ namespace KomodoApp
 
             //meal ingredients
             List<string> Ingredients = new List<string>();
-            for (int i = 0; i < 5; i++)
+            string[] ing = new string[5];
+            newItem.Ingredients = new List<string>();
+            for (int i = 0; i < ing.Length; i++)
             {
                 Console.WriteLine("enter an ingredient.");
-                Ingredients.Add(Console.ReadLine());
+                ing[i] = Console.ReadLine();
+                newItem.Ingredients.Add(ing[i]);
             }
+
             //meal price
             Console.WriteLine("please enter a price.");
             newItem.MealPrice = Int32.Parse(Console.ReadLine());

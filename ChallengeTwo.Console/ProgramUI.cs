@@ -63,7 +63,7 @@ namespace ChallengeTwo.Console
                 System.Console.WriteLine($"Claim ID: {content.ClaimID}\n" +
                     $"Claim Type: { content.property}\n" +
                     $"Claim Description: {content.Description}\n" +
-                    $"Claim Amount: {content.ClaimAmount}\n" +
+                    $"Claim Amount: ${content.ClaimAmount}\n" +
                     $"Date of Incident: {content.DateOfIncident}\n" +
                     $"Date of Claim: {content.DateOfClaim}\n" +
                     $"Is valid: {content.IsValid}\n");

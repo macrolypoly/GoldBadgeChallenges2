@@ -13,6 +13,7 @@ namespace Repository_Komodo
         public string MealDescription { get; set; }
 
         public List<string> Ingredients { get; set; }
+
         public int MealPrice { get; set; }
 
         public Menu()

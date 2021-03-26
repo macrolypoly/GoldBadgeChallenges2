@@ -21,6 +21,14 @@ namespace Repository_Komodo
         {
             _listOfMenuItems.Add(menu);
         }
+        public bool AddItemToMenu(Menu content)
+        {
+            int startingCount = _listOfMenuItems.Count();
+            _listOfMenuItems.Add(content);
+            bool wasAdded = (_listOfMenuItems.Count > startingCount) ? true : false;
+            return wasAdded;
+            //_listOfMenuItems.Add(content);
+        }
         public bool DeleteItems(int num)
         {
             Menu menu = GetMenuByNum(num);
