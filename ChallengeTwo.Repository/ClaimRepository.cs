@@ -21,5 +21,34 @@ namespace ChallengeTwo.Repository
         {
             _listOfClaims.Add(claim);
         }
+        public bool DeleteItems(int num)
+        {
+            Claim claim = GetClaimByID(num);
+            if (claim == null)
+            {
+                return false;
+            }
+            int initialCount = _listOfClaims.Count();
+            _listOfClaims.Remove(claim);
+            if (initialCount > _listOfClaims.Count)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public Claim GetClaimByID(int num)
+        {
+            foreach (Claim claim in _listOfClaims)
+            {
+                if (claim.ClaimID == num)
+                {
+                    return claim;
+                }
+            }
+            return null;
+        }
     }
 }
