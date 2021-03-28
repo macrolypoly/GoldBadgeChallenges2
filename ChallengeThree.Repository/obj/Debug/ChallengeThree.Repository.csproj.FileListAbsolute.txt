@@ -1,0 +1,5 @@
+C:\1150\GoldBadgeChallenges\ChallengeThree.Repository\obj\Debug\ChallengeThree.Repository.csproj.CoreCompileInputs.cache
+C:\1150\GoldBadgeChallenges\ChallengeThree.Repository\bin\Debug\ChallengeThree.Repository.dll
+C:\1150\GoldBadgeChallenges\ChallengeThree.Repository\bin\Debug\ChallengeThree.Repository.pdb
+C:\1150\GoldBadgeChallenges\ChallengeThree.Repository\obj\Debug\ChallengeThree.Repository.dll
+C:\1150\GoldBadgeChallenges\ChallengeThree.Repository\obj\Debug\ChallengeThree.Repository.pdb

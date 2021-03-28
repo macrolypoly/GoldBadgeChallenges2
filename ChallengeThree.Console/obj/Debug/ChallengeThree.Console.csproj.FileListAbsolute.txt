@@ -1,0 +1,10 @@
+C:\1150\GoldBadgeChallenges\ChallengeThree.Console\obj\Debug\ChallengeThree.Console.csprojAssemblyReference.cache
+C:\1150\GoldBadgeChallenges\ChallengeThree.Console\obj\Debug\ChallengeThree.Console.csproj.CoreCompileInputs.cache
+C:\1150\GoldBadgeChallenges\ChallengeThree.Console\bin\Debug\ChallengeThree.Console.exe.config
+C:\1150\GoldBadgeChallenges\ChallengeThree.Console\bin\Debug\ChallengeThree.Console.exe
+C:\1150\GoldBadgeChallenges\ChallengeThree.Console\bin\Debug\ChallengeThree.Console.pdb
+C:\1150\GoldBadgeChallenges\ChallengeThree.Console\bin\Debug\ChallengeThree.Repository.dll
+C:\1150\GoldBadgeChallenges\ChallengeThree.Console\bin\Debug\ChallengeThree.Repository.pdb
+C:\1150\GoldBadgeChallenges\ChallengeThree.Console\obj\Debug\ChallengeThree.Console.csproj.CopyComplete
+C:\1150\GoldBadgeChallenges\ChallengeThree.Console\obj\Debug\ChallengeThree.Console.exe
+C:\1150\GoldBadgeChallenges\ChallengeThree.Console\obj\Debug\ChallengeThree.Console.pdb
