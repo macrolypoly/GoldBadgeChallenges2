@@ -3,3 +3,4 @@ C:\1150\GoldBadgeChallenges\ChallengeThree.Repository\bin\Debug\ChallengeThree.R
 C:\1150\GoldBadgeChallenges\ChallengeThree.Repository\bin\Debug\ChallengeThree.Repository.pdb
 C:\1150\GoldBadgeChallenges\ChallengeThree.Repository\obj\Debug\ChallengeThree.Repository.dll
 C:\1150\GoldBadgeChallenges\ChallengeThree.Repository\obj\Debug\ChallengeThree.Repository.pdb
+C:\1150\GoldBadgeChallenges\ChallengeThree.Repository\obj\Debug\ChallengeThree.Repository.csprojAssemblyReference.cache

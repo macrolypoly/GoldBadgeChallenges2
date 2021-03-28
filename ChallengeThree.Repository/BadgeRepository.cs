@@ -28,22 +28,41 @@ namespace ChallengeThree.Repository
             bool wasAdded = (_listOfBadges.Count > startingCount) ? true : false;
             return wasAdded;
         }
-        public void DeleteBadge(int num)
+        public bool DeleteBadge(string num)
         {
-            Dictionary<int, string> kvp = _listOfBadges;
-            kvp.Remove(GetBadgeByID(num));
+            Dictionary<int, string> kvp = GetBadgeByID(num);
+            if (kvp == null)
+            {
+                return false;
+            }
+
+            int initialCount = _listOfBadges.Count();
+            _listOfBadges.Remove(kvp);
+            if (initialCount > _listOfBadges.Count())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-        public Dictionary<int,string> GetBadgeByID(int num)
+        public Dictionary<int,string> GetBadgeByID(string num)
         {
             Dictionary<int, string> potato = _listOfBadges;
-            foreach (Dictionary<int,string> kvp in _listOfBadges)
+            foreach(var item in potato.Keys)
             {
-                if (kvp.ContainsKey(num))
+                if (item.Equals(num))
                 {
-                    return kvp;
+                    int ID = item;
+                    return potato;
                 }
             }
             return null;
+        }
+        public bool UpdateBadge(string oldBadge, Dictionary<int,string> kvp)
+        {
+            return false;
         }
     }
 }

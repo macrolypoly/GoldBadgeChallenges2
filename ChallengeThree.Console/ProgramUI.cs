@@ -36,7 +36,7 @@ namespace ChallengeThree.Console
             while (running)
             {
                 System.Console.WriteLine("Hello Security Admin, what would you like to do? \n");
-                System.Console.WriteLine("1. Add a badge\n 2. Edit a badge\n 3. List all badges");
+                System.Console.WriteLine("1. Add a badge\n 2. Edit a badge\n 3. List all badges\n 4. Delete Badge\n 5. Exit");
                 int userInput = Int32.Parse(System.Console.ReadLine());
                 switch (userInput)
                 {
@@ -48,6 +48,12 @@ namespace ChallengeThree.Console
                         break;
                     case 3:
                         ListAllBadges();
+                        break;
+                    case 4:
+                        DeleteBadge();
+                        break;
+                    case 5:
+                        running = false;
                         break;
                 }
             }
@@ -85,6 +91,12 @@ namespace ChallengeThree.Console
         }
         public void EditBadge()
         {
+            System.Console.WriteLine("What is the badge number to update?");
+            string oldBadge = System.Console.ReadLine();
+
+            Dictionary<int,string> potato = _repo.GetBadgeByID(oldBadge);
+            
+            System.Console.WriteLine(oldBadge.ToString() + " has access to doors" + potato.Values.ToString());
 
         }
         public void ListAllBadges()
@@ -98,6 +110,23 @@ namespace ChallengeThree.Console
                 System.Console.WriteLine("{0}	{1}", kvp.Key, kvp.Value);
             }
             System.Console.ReadKey();
+        }
+        public void DeleteBadge()
+        {
+            Dictionary<int, string> dictBadge = _repo.ReturnBadge();
+            ListAllBadges();
+            System.Console.WriteLine("please enter badge id you want to remove");
+            string input = System.Console.ReadLine();
+            bool wasDeleted = _repo.DeleteBadge(input);
+            if (wasDeleted)
+            {
+                System.Console.WriteLine("The content was successfully deleted.");
+            }
+            else
+            {
+                System.Console.WriteLine("the content could not be deleted.");
+            }
+
         }
     }
 
