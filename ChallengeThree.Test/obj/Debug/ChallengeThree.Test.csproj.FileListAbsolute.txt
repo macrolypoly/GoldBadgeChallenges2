@@ -1,0 +1,16 @@
+C:\1150\GoldBadgeChallenges\ChallengeThree.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\1150\GoldBadgeChallenges\ChallengeThree.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\1150\GoldBadgeChallenges\ChallengeThree.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\1150\GoldBadgeChallenges\ChallengeThree.Test\bin\Debug\ChallengeThree.Test.dll
+C:\1150\GoldBadgeChallenges\ChallengeThree.Test\bin\Debug\ChallengeThree.Test.pdb
+C:\1150\GoldBadgeChallenges\ChallengeThree.Test\bin\Debug\ChallengeThree.Repository.dll
+C:\1150\GoldBadgeChallenges\ChallengeThree.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\1150\GoldBadgeChallenges\ChallengeThree.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\1150\GoldBadgeChallenges\ChallengeThree.Test\bin\Debug\ChallengeThree.Repository.pdb
+C:\1150\GoldBadgeChallenges\ChallengeThree.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\1150\GoldBadgeChallenges\ChallengeThree.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\1150\GoldBadgeChallenges\ChallengeThree.Test\obj\Debug\ChallengeThree.Test.csprojAssemblyReference.cache
+C:\1150\GoldBadgeChallenges\ChallengeThree.Test\obj\Debug\ChallengeThree.Test.csproj.CoreCompileInputs.cache
+C:\1150\GoldBadgeChallenges\ChallengeThree.Test\obj\Debug\ChallengeThree.Test.csproj.CopyComplete
+C:\1150\GoldBadgeChallenges\ChallengeThree.Test\obj\Debug\ChallengeThree.Test.dll
+C:\1150\GoldBadgeChallenges\ChallengeThree.Test\obj\Debug\ChallengeThree.Test.pdb
