@@ -11,6 +11,7 @@ namespace ChallengeTwo.Console
     {
         Claim claims = new Claim();
         ClaimRepository _repo = new ClaimRepository();
+        Queue<int> queue = new Queue<int>();
         public void Run()
         {
             SeedClaim();
@@ -30,6 +31,7 @@ namespace ChallengeTwo.Console
             _repo.AddClaim(claim1);
             _repo.AddClaim(claim2);
             _repo.AddClaim(claim3);
+            
         }
         public void Menu()
         {
@@ -84,24 +86,30 @@ namespace ChallengeTwo.Console
         }
         public void TakeCare()
         {
-            System.Console.WriteLine("Here are the details for the next claim to be handled:");
-
+            queue.Enqueue(3);
+            queue.Enqueue(2);
+            queue.Enqueue(1);
             List<Claim> listClaim = _repo.ReturnClaims();
-            var content = listClaim.ElementAt(0);
-            string p = string.Format("ClaimID: {0} \nType: {1} \nDescription: {2} \nAmount: ${3} \nDateOfAccident: {4} \nDateOfClaim: {5} \nIsValid: {6}", content.ClaimID, content.property, content.Description, content.ClaimAmount, content.DateOfIncident, content.DateOfClaim, content.IsValid); ;
-            System.Console.WriteLine(p);
-            System.Console.WriteLine("do you want to deal with this claim now(y/n)?");
-            string input = System.Console.ReadLine();
-            switch (input)
+            for (int i = 0; i < listClaim.Count; i++)
             {
-                case "y":
-                    int num;
-                    System.Console.WriteLine("confirm Claim ID:");
-                    num = Int32.Parse(System.Console.ReadLine());
-                    DeleteItems(num);
-                    break;
-                case "n":
-                    break;
+                System.Console.WriteLine("Here are the details for the next claim to be handled:");
+                var content = listClaim.ElementAt(i);
+                string p = string.Format("ClaimID: {0} \nType: {1} \nDescription: {2} \nAmount: ${3} \nDateOfAccident: {4} \nDateOfClaim: {5} \nIsValid: {6}", content.ClaimID, content.property, content.Description, content.ClaimAmount, content.DateOfIncident, content.DateOfClaim, content.IsValid); ;
+                System.Console.WriteLine(p);
+                System.Console.WriteLine("do you want to deal with this claim now(y/n)?");
+                string input = System.Console.ReadLine();
+                switch (input)
+                {
+                    case "y":
+                        int num;
+                        System.Console.WriteLine("confirm Claim ID:");
+                        num = Int32.Parse(System.Console.ReadLine());
+                        queue.Dequeue();
+
+                        break;
+                    case "n":
+                        break;
+                }
             }
         }
 
@@ -182,6 +190,7 @@ namespace ChallengeTwo.Console
                     break;
             }
             _repo.AddClaim(newClaim);
+            queue.Enqueue(newClaim.ClaimID);
         }
 
     }

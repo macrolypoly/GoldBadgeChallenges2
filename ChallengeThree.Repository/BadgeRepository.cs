@@ -8,36 +8,37 @@ namespace ChallengeThree.Repository
 {
     public class BadgeRepository
     {
-        Dictionary<int, string> _listOfBadges = new Dictionary<int,string>();
+        Dictionary<int, List<string>> _listOfBadges = new Dictionary<int,List<string>>();
 
         //CRUD
 
-        public Dictionary<int,string> ReturnBadge()
+        public Dictionary<int,List<string>> ReturnBadge()
         {
             return _listOfBadges;
         }
 
         public void AddBadge(Badge badge)
         {
-            _listOfBadges.Add(badge.BadgeID,badge.BadgeName);
+            _listOfBadges.Add(badge.BadgeID, badge.DoorNames);
         }
         public bool AddBadgeToDict(Badge content)
         {
             int startingCount = _listOfBadges.Count();
-            _listOfBadges.Add(content.BadgeID,content.BadgeName);
+            _listOfBadges.Add(content.BadgeID, content.DoorNames);
             bool wasAdded = (_listOfBadges.Count > startingCount) ? true : false;
             return wasAdded;
         }
         public bool DeleteBadge(string num)
         {
-            Dictionary<int, string> kvp = GetBadgeByID(num);
-            if (kvp == null)
+            KeyValuePair<int, List<string>> kvp = GetBadgeByID(num);
+            Dictionary<int, List<string>> badge = _listOfBadges;
+            if (badge == null)
             {
                 return false;
             }
 
             int initialCount = _listOfBadges.Count();
-            _listOfBadges.Remove(kvp);
+            _listOfBadges.Remove(Int32.Parse(num));
             if (initialCount > _listOfBadges.Count())
             {
                 return true;
@@ -47,18 +48,17 @@ namespace ChallengeThree.Repository
                 return false;
             }
         }
-        public Dictionary<int,string> GetBadgeByID(string num)
+        public KeyValuePair<int,List<string>> GetBadgeByID(string num)
         {
-            Dictionary<int, string> potato = _listOfBadges;
-            foreach(var item in potato.Keys)
+            Dictionary<int, List<string>> dictBadge = _listOfBadges;
+            foreach(KeyValuePair<int, List<string>> kvp in dictBadge)
             {
-                if (item.Equals(num))
+                if (kvp.Key.ToString() == num)
                 {
-                    int ID = item;
-                    return potato;
+                    return kvp;
                 }
             }
-            return null;
+            return default;
         }
         public bool UpdateBadge(string oldBadge, Dictionary<int,string> kvp)
         {
