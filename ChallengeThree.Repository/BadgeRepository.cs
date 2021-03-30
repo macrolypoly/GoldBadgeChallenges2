@@ -60,9 +60,5 @@ namespace ChallengeThree.Repository
             }
             return default;
         }
-        public bool UpdateBadge(string oldBadge, Dictionary<int,string> kvp)
-        {
-            return false;
-        }
     }
 }
